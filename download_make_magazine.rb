@@ -1,8 +1,6 @@
 require 'capybara/poltergeist'
 
-# I can only get volumes 10 and up...
-# not sure why
-starting_issue = ENV["MAKE_STARTING_ISSUE"].to_i || 10
+starting_issue = ENV["MAKE_STARTING_ISSUE"].to_i || 1
 email = ENV["MAKE_EMAIL"]
 raise "set MAKE_EMAIL env variable" unless email
 
@@ -23,7 +21,7 @@ module MakeMagazine
     def download_all_issues(starting_issue = 1)
       issue_no = starting_issue
       while(true) do
-        download_issue(issue_no)
+        download_issue("%02d" % issue_no)
         issue_no += 1
       end
     end

@@ -3,10 +3,10 @@ download_make_magazine
 
 Just a quick script to download all the make magazine back issues.
 
-    MAKE_STARTING_ISSUE=10 MAKE_EMAIL=me@example.com ruby download_make_magazine.rb
+    MAKE_STARTING_ISSUE=1 MAKE_EMAIL=me@example.com ruby download_make_magazine.rb
 
 It'll save the issues as PDFs to the local dir and stop once it can't find any
-new issues.  Not sure why, but I can only go back to issue 10, YMMV
+new issues.
 
 If anyone has any improvements or issues feel free to let me know, this is
 pretty quick and dirty.  Ideally I wouldn't need to use a headless js browser
